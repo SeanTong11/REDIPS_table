@@ -8,57 +8,61 @@
 /* global REDIPS */
 
 /* enable strict mode */
-'use strict';
+'use strict'
 
 // create redips container
-let redips = {};
+let redips = {}
 
 
 // REDIPS.table initialization
 redips.init = function () {
 	// define reference to the REDIPS.table object
-	var rt = REDIPS.table;
+	var rt = REDIPS.table
 	// activate onmousedown event listener on cells within table with id="mainTable"
-	rt.onMouseDown('mainTable', true);
+	rt.onMouseDown('mainTable', true)
 	// show cellIndex (it is nice for debugging)
-	rt.cellIndex(true);
+	rt.cellIndex(true)
 	// define background color for marked cell
-	rt.color.cell = '#9BB3DA';
-};
+	rt.color.cell = '#9BB3DA'
+}
 
 
 // function merges table cells
 redips.merge = function () {
 	// first merge cells horizontally and leave cells marked
-	REDIPS.table.merge('h', false);
+	REDIPS.table.merge('h', false)
 	// and then merge cells vertically and clear cells (second parameter is true by default)
-	REDIPS.table.merge('v');
-};
+	REDIPS.table.merge('v')
+	// // first merge cells horizontally and leave cells marked
+	// REDIPS.table.myMerge('h', false);
+	// // and then merge cells vertically and clear cells (second parameter is true by default)
+	// REDIPS.table.myMerge('v');
+}
 
 
 // function splits table cells if colspan/rowspan is greater then 1
 // mode is 'h' or 'v' (cells should be marked before)
 redips.split = function (mode) {
-	REDIPS.table.split(mode);
-};
+	REDIPS.table.split(mode)
+}
 
 
 // insert/delete table row
 redips.row = function (type) {
-	REDIPS.table.row('mainTable', type);
-};
+	REDIPS.table.row('mainTable', type)
+}
 
 
 // insert/delete table column
 redips.column = function (type) {
-	REDIPS.table.column('mainTable', type);
-};
+	REDIPS.table.column('mainTable', type)
+}
 
 
 // add onload event listener
 if (window.addEventListener) {
-	window.addEventListener('load', redips.init, false);
+	window.addEventListener('load', redips.init, false)
 }
 else if (window.attachEvent) {
-	window.attachEvent('onload', redips.init);
+	window.attachEvent('onload', redips.init)
 }
