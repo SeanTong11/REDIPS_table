@@ -5,7 +5,7 @@ I add a small feature: merge cells to non-rectangle polygon.
 See following picture:
 
 <div align="center">
-    <img src="https://https://github.com/SeanTong11/REDIPS_table/src/example.png" width="200px">
+    <img src="https://raw.githubusercontent.com/SeanTong11/REDIPS_table/master/src/example.png" width="200px">
 </div>
 How to use?  
 run example/index.html
