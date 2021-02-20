@@ -1091,6 +1091,7 @@ REDIPS.table = (function () {
 		onMouseDown: onMouseDown,
 		mark: mark,
 		merge: merge,
+		myMerge: myMerge,
 		split: split,
 		row: row,
 		column: column,

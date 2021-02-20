@@ -33,11 +33,13 @@ redips.merge = function () {
 	REDIPS.table.merge('h', false)
 	// and then merge cells vertically and clear cells (second parameter is true by default)
 	REDIPS.table.merge('v')
-	// // first merge cells horizontally and leave cells marked
-	// REDIPS.table.myMerge('h', false);
+	// first merge cells horizontally and leave cells marked
+	// REDIPS.table.myMerge('h', false)
 	// // and then merge cells vertically and clear cells (second parameter is true by default)
-	// REDIPS.table.myMerge('v');
+	// REDIPS.table.myMerge('v')
 }
+
+
 
 
 // function splits table cells if colspan/rowspan is greater then 1
